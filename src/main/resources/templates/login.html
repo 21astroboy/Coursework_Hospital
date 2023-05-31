@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" th:href="@{/index}">Registration and Login System</a>
+        <a class="navbar-brand" th:href="@{/auth}">Регистрация и авторизация</a>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
                 data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" th:href="@{/register}">Register</a>
+                    <a aria-current="page" class="nav-link active" th:href="@{/register}">Зарегистрироваться</a>
                 </li>
             </ul>
         </div>
@@ -33,15 +33,15 @@
         <div class="col-md-6 offset-md-3">
 
             <div th:if="${param.error}">
-                <div class="alert alert-danger">Invalid Email or Password</div>
+                <div class="alert alert-danger">Неверная/-ые почта или/и пароль</div>
             </div>
             <div th:if="${param.logout}">
-                <div class="alert alert-success"> You have been logged out.</div>
+                <div class="alert alert-success"> Вы вышли из личного кабинета</div>
             </div>
 
             <div class="card">
                 <div class="card-header">
-                    <h2 class="text-center">Login Form</h2>
+                    <h2 class="text-center">Вход в аккаунт</h2>
                 </div>
                 <div class="card-body">
                     <form
@@ -51,30 +51,30 @@
                             th:action="@{/login}"
                     >
                         <div class="form-group mb-3">
-                            <label class="control-label"> Email</label>
+                            <label class="control-label"> Почта</label>
                             <input
                                     class="form-control"
                                     id="username"
                                     name="username"
-                                    placeholder="Enter email address"
+                                    placeholder="Введите свою почту"
                                     type="text"
                             />
                         </div>
 
                         <div class="form-group mb-3">
-                            <label class="control-label"> Password</label>
+                            <label class="control-label"> Пароль</label>
                             <input
                                     class="form-control"
                                     id="password"
                                     name="password"
-                                    placeholder="Enter password"
+                                    placeholder="Введите свой пароль"
                                     type="password"
                             />
                         </div>
                         <div class="form-group mb-3">
-                            <button class="btn btn-primary" type="submit">Submit</button>
-                            <span> Not registered ?
-                                <a th:href="@{/register}">Register/Signup here</a>
+                            <button class="btn btn-primary" type="submit">Войти</button>
+                            <span> Не зарегистрированы ?
+                                <a th:href="@{/register}">Зарегистрироваться</a>
                             </span>
                         </div>
                     </form>

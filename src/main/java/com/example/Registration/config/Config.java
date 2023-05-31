@@ -29,13 +29,16 @@ public class Config {
         http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/register/**").permitAll()
-                                .requestMatchers("/index").permitAll()
-                                .requestMatchers("/users").permitAll()
+                                .requestMatchers("/").permitAll()
+                                .requestMatchers("/auth").permitAll()
+                                .requestMatchers("/home").permitAll()
+
+
                 ).formLogin(
                         form -> form
-                                .loginPage("/index")
+                                .loginPage("/auth")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/users")
+                                .defaultSuccessUrl("/home")
                                 .permitAll()
                 ).logout(
                         logout -> logout

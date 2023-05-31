@@ -1,0 +1,39 @@
+
+a{
+    text-decoration: none;
+    color: rgb(28, 25, 25);
+}
+.header{
+    background-color: aquamarine;
+    text-align: justify;
+    width: 100%;
+    margin: 0 0 0 0;
+}
+.container{
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex; 
+}
+.menu-item{
+    padding-right: 30px;
+}
+ul{
+    list-style: none;
+}
+.otdeleniya{
+    padding-bottom: 100px;
+  }
+  .otdeleniya-list{
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    margin-bottom: 0%;
+  }
